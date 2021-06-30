@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  font-family: Helvetica;
+}
+body {
+  background-color: #dedede;
+}
+#welcome_text {
+  position: absolute;
+  width: 100%;
+  top: 150px;
+  left: 0;
+  font-size: 25px;
+  text-align: center;
+}
+.menu {
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.content {
+  width: 50%;
+  height: 400px;
+  position: absolute;
+  top: 120px;
+  left: 25%;
+}
+.button {
+  width: 7%;
+  height: 35px;
+  border: 0px solid #ffffff;
+  border-radius: 7px;
+  background-color: #dedede;
+}
+.place {
+  position: absolute;
+  background-color: #fff;
+  font-size: 20px;
+  width: 100%;
+  height: 60px;
+  border: 0px solid #ffffff;
+  border-radius: 12px;
+  top: 0;
+  line-height: 60px;
+}
+.icon {
+  position: absolute;
+  background-color: #fff;
+  line-height: 260px;
+  width: 40%;
+  height: 260px;
+  border: 0px solid #ffffff;
+  border-radius: 12px;
+  top: 70px;
+  line-height: 60px;
+}
+.temp {
+  position: absolute;
+  background-color: #fff;
+  width: calc(60% - 10px);
+  height: 260px;
+  border: 0px solid #ffffff;
+  border-radius: 12px;
+  top: 70px;
+  right: 0;
+  line-height: 60px;
+}
+.meta {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  height: 60px;
+  border: 0px solid #ffffff;
+  border-radius: 12px;
+  top: 340px;
+  right: 0;
+  line-height: 60px;
+}
+#logo {
+  width: 50px;
+  position: absolute;
+  top: 5px;
+  left: 20px;
+}
+#logo2 {
+  width: 120px;
+  position: absolute;
+  top: 250px;
+  left: calc((100% - 120px) / 2);
+}
+#inp {
+  position: absolute;
+  background-color: #dedede;
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: calc(41% - 20px);
+  height: 35px;
+  border: 0px solid #ffffff;
+  border-radius: 7px;
+  top: 12.5px;
+  left: 25%;
+  line-height: 35px;
+}
+#find {
+  position: absolute;
+  top: 12.5px;
+  right: 25%;
+}
+#place_icon {
+  width: 25px;
+  position: absolute;
+  top: 14px;
+  left: 15px;
+}
+.icon > img {
+  height: 100%;
+}
+.place > p {
+  position: absolute;
+  left: 40px;
+}
+.temp > #temp {
+  position: absolute;
+  font-size: 130px;
+  bottom: 65px;
+  left: 25px;
+}
+.temp > #description {
+  position: absolute;
+  font-size: 50px;
+  top: 35px;
+  left: 25px;
+}
+.temp > #feels_like {
+  position: absolute;
+  font-size: 25px;
+  top: 100px;
+  right: 35px;
+}
+.temp > #humidity {
+  position: absolute;
+  font-size: 50px;
+  bottom: 35px;
+  right: 35px;
+}
+.temp > img {
+  width: 45px;
+  position: absolute;
+  bottom: 40px;
+  right: 150px;
+}
+@media screen and (max-width: 1080px){
+  #welcome_text {
+    top: 150px;
+    font-size: 45px;
+  }
+  .content {
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    top: 160px;
+    left: 0;
+  }
+  .menu {
+    width: 100%;
+    height: 150px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  #logo {
+    width: 120px;
+    top: 15px;
+    left: 30px;
+  }
+  #logo2 {
+    width: 250px;
+    top: 340px;
+    left: calc((100% - 250px) / 2);
+  }
+  #inp {
+    font-size: 40px;
+    width: calc(61% - 20px);
+    height: 70px;
+    border-radius: 20px;
+    top: 30px;
+    left: 20%;
+  }
+  #find {
+    font-size: 40px;
+    top: 30px;
+    right: 20px;
+    width: 15%;
+    height: 90px;
+    border-radius: 20px;
+    background-color: #dedede;
+  }
+  .place {
+    width: 98%;
+    height: 150px;
+    font-size: 70px;
+    top: 0;
+    left: 1%;
+    border-radius: 20px;
+    line-height: 150px;
+  }
+  #place_icon {
+    width: 70px;
+    position: absolute;
+    top: 40px;
+    left: 15px;
+  }
+  .place > p {
+    position: absolute;
+    left: 100px;
+  }
+  .icon {
+    width: 38.5%;
+    height: 370px;
+    top: 160px;
+    left: 1%;
+    border-radius: 20px;
+    line-height: 260px;
+  }
+  .icon > img {
+    width: 100%;
+  }
+  .temp {
+    width: 58.5%;
+    height: 370px;
+    top: 160px;
+    right: 1%;
+    border-radius: 20px;
+    line-height: 60px;
+  }
+  .temp > #temp {
+    font-size: 200px;
+    bottom: 85px;
+    left: 25px;
+  }
+  .temp > #description {
+    font-size: 70px;
+    top: 55px;
+    left: 25px;
+  }
+  .temp > #feels_like {
+    font-size: 30px;
+    top: 200px;
+    right: 35px;
+  }
+  .temp > #humidity {
+    font-size: 70px;
+    bottom: 35px;
+    right: 35px;
+  }
+  .temp > img {
+    width: 55px;
+    bottom: 35px;
+    right: 180px;
+  }
+}

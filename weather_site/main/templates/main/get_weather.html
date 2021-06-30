@@ -1,0 +1,37 @@
+{% extends 'main/main.html' %}
+{% load static %}
+
+{% block title %}Weather in {{city}}{% endblock %}
+
+
+
+{% block content %}
+
+
+  {% if error %}
+    <p id='welcome_text'>{{error}}</p>
+  {% else %}
+
+    <div class="place">
+      <img src="{% static 'main/icons/place.png' %}" id="place_icon"><p>The weather in {{city}}</p>
+    </div>
+
+    <div class="icon">
+      <img src="{{icon}}">
+    </div>
+
+    <div class="temp">
+      <p id='temp'>{{temp}}°</p>
+      <p id='description'>{{description}}</p>
+      <p id='feels_like'>Feels like {{feels_like}}°</p>
+      <img src="{% static 'main/icons/drop.png' %}">
+      <p id="humidity">{{humidity}}%</p>
+    </div>
+
+    <!--<div class="meta">
+      <p></p>
+    </div>-->
+
+
+  {% endif %}
+{% endblock %}
