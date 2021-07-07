@@ -1,6 +1,7 @@
 * {
   margin: 0;
   font-family: Helvetica;
+  padding: 0;
 }
 body {
   background-color: #dedede;
@@ -23,7 +24,7 @@ body {
 }
 .content {
   width: 50%;
-  height: 400px;
+  height: 500px;
   position: absolute;
   top: 120px;
   left: 25%;
@@ -52,10 +53,11 @@ body {
   line-height: 260px;
   width: 40%;
   height: 260px;
+  text-align: center;
   border: 0px solid #ffffff;
   border-radius: 12px;
   top: 70px;
-  line-height: 60px;
+  line-height: 260px;
 }
 .temp {
   position: absolute;
@@ -65,17 +67,6 @@ body {
   border: 0px solid #ffffff;
   border-radius: 12px;
   top: 70px;
-  right: 0;
-  line-height: 60px;
-}
-.meta {
-  position: absolute;
-  background-color: #fff;
-  width: 100%;
-  height: 60px;
-  border: 0px solid #ffffff;
-  border-radius: 12px;
-  top: 340px;
   right: 0;
   line-height: 60px;
 }
@@ -153,6 +144,29 @@ body {
   bottom: 40px;
   right: 150px;
 }
+.day_forcast {
+  position: absolute;
+  background-color: #fff;
+  padding: 2%;
+  width: 96%;
+  height: calc(100px);
+  border: 0px solid #ffffff;
+  border-radius: 12px;
+  top: 340px;
+  right: 0;
+}
+.day_forcast_time {
+  width: 12.5%;
+  text-align: center;
+  height: 120px;
+  float: left;
+}
+.day_forcast_time > img {
+  width: 80%;
+}
+.day_forcast_text {
+  height: 20px;
+}
 @media screen and (max-width: 1080px){
   #welcome_text {
     top: 150px;
@@ -160,7 +174,7 @@ body {
   }
   .content {
     width: 100%;
-    height: 400px;
+    height: 700px;
     position: absolute;
     top: 160px;
     left: 0;
@@ -186,7 +200,7 @@ body {
   #inp {
     font-size: 40px;
     width: calc(61% - 20px);
-    height: 70px;
+    height: 90px;
     border-radius: 20px;
     top: 30px;
     left: 20%;
@@ -262,5 +276,17 @@ body {
     width: 55px;
     bottom: 35px;
     right: 180px;
+  }
+  .day_forcast {
+    left: 1%;
+    width: 94%;
+    height: 200px;
+    overflow-x: auto;
+    top: 540px;
+    font-size: 30px;
+  }
+  .day_forcast_time > img {
+    height: 110px;
+    width: auto;
   }
 }

@@ -20,7 +20,7 @@ SECRET_KEY = '#9fi7+_lchpjk&gv@)q6lx%v8)4wm7v7=6ysp18p*uk%m#eobp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['172.20.10.6', '192.168.1.35', '127.0.0.1']
+ALLOWED_HOSTS = ['172.20.10.6', '192.168.1.33', '127.0.0.1']
 
 
 # Application definition
@@ -123,3 +123,5 @@ STATIC_URL = '/static/'
 # Config for getting weather
 WEATHER_API = 'fdffde09b63fcb30c9d344dbd0245be4'
 URL = 'http://api.openweathermap.org/data/2.5/weather?q={0}&appid={1}&units=metric'
+
+URL_F = 'https://api.openweathermap.org/data/2.5/forecast?q={0}&appid={1}&cnt=8&units=metric'
