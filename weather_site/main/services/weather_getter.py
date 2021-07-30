@@ -40,7 +40,6 @@ def get_forcast(WEATHER_API, url, city, context):
 
     j = 1
     for i in weather_dict['list']:
-        key = f'{j}'
         temp = int(i['main']['temp'])
         icon_n = i['weather'][0]['icon']
         icon = f'http://openweathermap.org/img/wn/{icon_n}@4x.png'
@@ -48,5 +47,27 @@ def get_forcast(WEATHER_API, url, city, context):
         context[f'icon{j}'] = icon
         context[f'time{j}'] = i['dt_txt'][11:13]
         j += 1
+
+    return context
+
+
+def get_forcast_for_5_days(WEATHER_API, url, city, context):
+    wg = Weather_getter(WEATHER_API, url)
+
+    weather_dict = wg.get_weather(city)
+
+    context['five_day_forecast'] = {}
+
+    j = 1
+    for i in weather_dict['list']:
+        if i['dt_txt'][11:13] == '15':
+            temp = int(i['main']['temp'])
+            icon_n = i['weather'][0]['icon']
+            icon = f'http://openweathermap.org/img/wn/{icon_n}@4x.png'
+            context['five_day_forecast'][f'temp{j}'] = temp
+            context['five_day_forecast'][f'icon{j}'] = icon
+            context['five_day_forecast'][f'time{j}'] = i['dt_txt'][8:10]
+
+            j += 1
 
     return context

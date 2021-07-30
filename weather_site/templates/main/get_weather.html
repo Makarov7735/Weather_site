@@ -1,0 +1,121 @@
+{% extends 'main/main.html' %}
+{% load static %}
+
+{% block title %}Weather in {{city}}{% endblock %}
+
+{% block description %}
+  <meta name="description" content="Detailed weather forecast in {{ city }}
+  for today. Temperature for the whole day on egormakarov.pythonanywhere.com">
+{% endblock %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'main/css/get_weather.css' %}">
+{% endblock %}
+
+{% block content %}
+
+
+  {% if error %}
+    <p id='welcome_text'>{{error}}</p>
+  {% else %}
+
+    <div class="place">
+      <img src="{% static 'main/icons/place.png' %}" id="place_icon"><p>The weather in {{city}}</p>
+    </div>
+
+    <div class="icon">
+      <img src="{{icon}}">
+    </div>
+
+    <div class="temp">
+      <p id='temp'>{{temp}}°</p>
+      <p id='description'>{{description}}</p>
+      <p id='feels_like'>Feels like {{feels_like}}°</p>
+      <img src="{% static 'main/icons/drop.png' %}">
+      <p id="humidity">{{humidity}}%</p>
+    </div>
+
+    <div class="day_forecast">
+      <div class="day_forecast_time">
+        <p id='temp'>{{temp1}}°</p>
+        <img src="{{icon1}}">
+        <p class="day_forecast_text">{{time1}}</p>
+      </div>
+
+      <div class="day_forecast_time">
+        <p id='temp'>{{temp2}}°</p>
+        <img src="{{icon2}}">
+        <p class="day_forecast_text">{{time2}}</p>
+      </div>
+
+      <div class="day_forecast_time">
+        <p id='temp'>{{temp3}}°</p>
+        <img src="{{icon3}}">
+        <p class="day_forecast_text">{{time3}}</p>
+      </div>
+
+      <div class="day_forecast_time">
+        <p id='temp'>{{temp4}}°</p>
+        <img src="{{icon4}}">
+        <p class="day_forecast_text">{{time4}}</p>
+      </div>
+
+      <div class="day_forecast_time">
+        <p id='temp'>{{temp5}}°</p>
+        <img src="{{icon6}}">
+        <p class="day_forecast_text">{{time5}}</p>
+      </div>
+
+      <div class="day_forecast_time">
+        <p id='temp'>{{temp6}}°</p>
+        <img src="{{icon6}}">
+        <p class="day_forecast_text">{{time6}}</p>
+      </div>
+
+      <div class="day_forecast_time">
+        <p id='temp'>{{temp7}}°</p>
+        <img src="{{icon7}}">
+        <p class="day_forecast_text">{{time7}}</p>
+      </div>
+
+      <div class="day_forecast_time">
+        <p id='temp'>{{temp8}}°</p>
+        <img src="{{icon8}}">
+        <p class="day_forecast_text">{{time8}}</p>
+      </div>
+    </div>
+
+    <div class="five_day_forecast">
+      <div class="five_day_forecast_day">
+        <p class='five_day_temp'>{{five_day_forecast.temp1}}°</p>
+        <img src="{{five_day_forecast.icon1}}">
+        <p class="five_day_forecast_text">{{five_day_forecast.time1}}</p>
+      </div>
+        <hr>
+      <div class="five_day_forecast_day">
+        <p class='five_day_temp'>{{five_day_forecast.temp2}}°</p>
+        <img src="{{five_day_forecast.icon2}}">
+        <p class="five_day_forecast_text">{{five_day_forecast.time2}}</p>
+      </div>
+        <hr>
+      <div class="five_day_forecast_day">
+        <p class='five_day_temp'>{{five_day_forecast.temp3}}°</p>
+        <img src="{{five_day_forecast.icon3}}">
+        <p class="five_day_forecast_text">{{five_day_forecast.time3}}</p>
+      </div>
+        <hr>
+      <div class="five_day_forecast_day">
+        <p class='five_day_temp'>{{five_day_forecast.temp4}}°</p>
+        <img src="{{five_day_forecast.icon4}}">
+        <p class="five_day_forecast_text">{{five_day_forecast.time4}}</p>
+      </div>
+        <hr>
+      <div class="five_day_forecast_day">
+        <p class='five_day_temp'>{{five_day_forecast.temp5}}°</p>
+        <img src="{{five_day_forecast.icon5}}">
+        <p class="five_day_forecast_text">{{five_day_forecast.time5}}</p>
+      </div>
+    </div>
+
+  {% endif %}
+{% endblock %}

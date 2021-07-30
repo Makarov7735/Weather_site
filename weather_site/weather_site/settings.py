@@ -20,8 +20,7 @@ SECRET_KEY = '#9fi7+_lchpjk&gv@)q6lx%v8)4wm7v7=6ysp18p*uk%m#eobp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['172.20.10.6', '192.168.1.33', '127.0.0.1']
-
+ALLOWED_HOSTS = ['172.20.10.6', '192.168.1.34', '127.0.0.1']
 
 # Application definition
 
@@ -31,7 +30,6 @@ INSTALLED_APPS = [
     'api.apps.ApiConfig',
 
     # Default applications
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -54,8 +52,8 @@ ROOT_URLCONF = 'weather_site.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [BASE_DIR / 'templates', ],
+        'APP_DIRS': False,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -118,6 +116,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
 
 
 # Config for getting weather
@@ -125,3 +126,4 @@ WEATHER_API = 'fdffde09b63fcb30c9d344dbd0245be4'
 URL = 'http://api.openweathermap.org/data/2.5/weather?q={0}&appid={1}&units=metric'
 
 URL_F = 'https://api.openweathermap.org/data/2.5/forecast?q={0}&appid={1}&cnt=8&units=metric'
+URL_F_5_DAYS = 'https://api.openweathermap.org/data/2.5/forecast?q={0}&appid={1}&units=metric'

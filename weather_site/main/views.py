@@ -1,7 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django.views.generic import View
 from django.conf import settings
-from .services.weather_getter import get_weather_context, get_forcast
+from .services.weather_getter import *
 
 
 class Weather_by_city(View):
@@ -12,8 +12,7 @@ class Weather_by_city(View):
     # if http method = GET
     def get(self, request, *args, **kwargs):
 
-        if 'city' in request.GET.keys():
-            r_city = request.GET['city']
+        if 'city' in request.GET.keys() and request.GET['city'] != '':
 
             try:
                 context = get_weather_context(
@@ -27,12 +26,21 @@ class Weather_by_city(View):
                     request.GET['city'],
                     context
                     )
-                return render(request,'main/get_weather.html', context)
+                get_forcast_for_5_days(
+                    settings.WEATHER_API,
+                    settings.URL_F_5_DAYS,
+                    request.GET['city'],
+                    context
+                    )
+                return render(request, 'main/get_weather.html', context)
             except ConnectionError and KeyError:
+                city = request.GET['city']
+                context = {
+                    'city': city,
+                    'error': f'Unknown city "{city}"'
+                }
 
-                return render(request, 'main/get_weather.html', {
-                    'error': 'No internet connection'
-                })
+                return render(request, 'main/get_weather.html', context)
 
         else:
 
