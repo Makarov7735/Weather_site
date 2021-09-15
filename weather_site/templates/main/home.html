@@ -1,0 +1,30 @@
+{% extends 'main/main.html' %}
+{% load static %}
+
+{% block title %}Current Weather Forecast | WeatherAnyWhere{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'main/css/default.css' %}">
+{% endblock %}
+
+{% block content %}
+{% if citys %}
+  {% for i in citys.values %}
+    <a href="?city={{i}}" class="last-searched-citys">
+      <img src="" class="last-searched-city-img">
+      <div class="last-searched-city-name">{{i}}</div>
+      <div class="last-searched-city-temp">--°</div>
+      <img class="last-searched-city-delete" src="{% static 'main/icons/delete.png' %}" onclick="delete_cookie(event)">
+    </a>
+  {% endfor %}
+{% else %}
+<p id='welcome_text'>Welcome to www.weatheranywhere.space.<br>
+  Here you can find out a forecast in your or any other city.</p>
+<img src="{% static 'main/icons/logo.png' %}" id='logo2'>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+  <script type="text/javascript" src="{% static 'main/js/default_get_weather.js' %}"></script>
+  <script type="text/javascript" src="{% static 'main/js/delete_cookie.js' %}"></script>
+{% endblock %}

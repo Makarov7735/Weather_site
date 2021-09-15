@@ -1,0 +1,67 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}
+.last-searched-citys {
+    width: 100%;
+    height: 70px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #000;
+    position: relative;
+}
+.last-searched-city-img {
+    position: absolute;
+    left: 0;
+    height: 70px;
+}
+.last-searched-city-name {
+    position: absolute;
+    left: 80px;
+    font-size: 30px;
+    line-height: 70px;
+}
+.last-searched-city-temp {
+    position: absolute;
+    right: 40px;
+    font-size: 30px;
+    line-height: 70px;
+}
+.last-searched-city-delete {
+    height: 30px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+@media screen and (max-width: 1080px) {
+    .content {
+        height: 1000px;
+    }
+    .last-searched-citys {
+        width: calc(100% - 20px);
+        height: 150px;
+        border-radius: 20px;
+        margin-left: 10px;
+    }
+    .last-searched-city-img {
+        height: 150px;
+    }
+    .last-searched-city-name {
+        left: 150px;
+        font-size: 60px;
+        line-height: 150px;
+    }
+    .last-searched-city-temp {
+        right: 80px;
+        font-size: 60px;
+        line-height: 150px;
+    }
+    .last-searched-city-delete {
+        height: 60px;
+        right: 5px;
+        bottom: 5px;
+    }
+}

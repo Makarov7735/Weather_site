@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  padding: 0;
+  /*font-size: 16px;*/
+}
+body {
+  background-color: #dedede;
+  overflow-y: auto;
+}
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+hr {
+  border: none;
+	border-top: 2px solid #dedede;
+  border-radius: 5px;
+}
+#welcome_text {
+  position: absolute;
+  width: 100%;
+  top: 200px;
+  left: 0;
+  font-size: 25px;
+  text-align: center;
+}
+.menu {
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.content {
+  width: 720px;
+  height: 770px;
+  position: absolute;
+  top: 70px;
+  left: calc((100% - 720px) / 2);
+}
+.button {
+  width: 100px;
+  height: 35px;
+  border: 0px solid #ffffff;
+  border-radius: 7px;
+  background-color: #dedede;
+  font-size: 16px;
+}
+.get-weather-form {
+  width: 720px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: calc((100% - 720px) / 2);
+}
+#logo {
+  width: 50px;
+  position: absolute;
+  top: 5px;
+  left: 20px;
+}
+#logo2 {
+  width: 120px;
+  position: absolute;
+  top: 300px;
+  left: calc((100% - 120px) / 2);
+}
+#inp {
+  position: absolute;
+  background-color: #dedede;
+  font-size: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: calc(100% - 130px);
+  height: 35px;
+  border: 0px solid #ffffff;
+  border-radius: 7px;
+  top: 12.5px;
+  left: 0;
+  line-height: 35px;
+}
+#find {
+  position: absolute;
+  top: 12.5px;
+  right: 0;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 25px;
+  width: 100%;
+  background-color: #666666;
+  text-align: center;
+  line-height: 25px;
+  font-size: 16px;
+}
+.footer > a {
+  color: #004e8d;
+}
+@media screen and (max-width: 1080px) {
+  #welcome_text {
+    top: 150px;
+    font-size: 45px;
+  }
+  .content {
+    width: 100%;
+    height: 1340px;
+    position: absolute;
+    top: 160px;
+    left: 0;
+  }
+  .menu {
+    width: 100%;
+    height: 150px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .get-weather-form {
+    width: calc(100% - 180px);
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 180px;
+  }
+  #logo {
+    width: 120px;
+    top: 15px;
+    left: 30px;
+  }
+  #logo2 {
+    width: 250px;
+    top: 340px;
+    left: calc((100% - 250px) / 2);
+  }
+  #inp {
+    font-size: 40px;
+    width: 75%;
+    height: 90px;
+    border-radius: 20px;
+    top: 30px;
+    left: 0;
+  }
+  #find {
+    font-size: 40px;
+    top: 30px;
+    right: 20px;
+    width: calc(25% - 60px);
+    height: 90px;
+    border-radius: 20px;
+    background-color: #dedede;
+  }
+  .footer {
+    height: 50px;
+    line-height: 50px;
+    font-size: 24px;
+  }
+}
